@@ -24,14 +24,4 @@ services:
             - web
         depends_on:
             - web
-            - composer
         restart: always
-    composer:
-        container_name: composer
-        image: composer:latest
-        command: install
-        volumes:
-            - ./app/:/app
-        restart: 'no'
-        depends_on:
-            - web
